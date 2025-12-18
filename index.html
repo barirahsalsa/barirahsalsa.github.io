@@ -1,1 +1,351 @@
-halo halo halo
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buket Elegan - Hadiah Spesial untuk Orang Terkasih</title>
+    <meta name="description"
+        content="Toko buket bunga, uang, boneka, dan custom dengan desain mewah dan elegan. Pesan buket impianmu sekarang.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Lafiore Bouquet</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#contact" class="btn-nav">Pesan Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-bg" style="background-image: url('assets/images/hero_bg.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="fade-in-up">Keindahan yang Abadi <br>di Setiap Rangkaian</h1>
+            <p class="fade-in-up delay-1">Hadirkan senyuman dengan buket bunga, uang, dan boneka premium kami.</p>
+            <a href="#products" class="btn btn-primary fade-in-up delay-2">Lihat Koleksi</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Sentuhan Personal</h2>
+                <div class="divider"></div>
+                <p>Kami percaya setiap buket menceritakan sebuah kisah. Dibuat dengan cinta dan ketelitian untuk momen
+                    spesial Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tutorial Section -->
+    <section id="tutorial" class="section tutorial-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Cara Pemesanan</h2>
+                <div class="divider"></div>
+                <p>Mudah dan cepat untuk mendapatkan buket impianmu.</p>
+            </div>
+
+            <div class="tutorial-grid">
+                <div class="tutorial-item">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-search step-icon"></i>
+                    <h3>Pilih Produk</h3>
+                    <p>Pilih jenis buket yang kamu inginkan dan isi detail kustomisasi di form yang tersedia.</p>
+                </div>
+                <div class="tutorial-item">
+                    <div class="step-number">2</div>
+                    <i class="fab fa-whatsapp step-icon"></i>
+                    <h3>Klik Pesan</h3>
+                    <p>Klik tombol "Pesan via WhatsApp". Detail pesananmu akan otomatis terbuat.</p>
+                </div>
+                <div class="tutorial-item">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-paper-plane step-icon"></i>
+                    <h3>Kirim Format</h3>
+                    <p>Kirim pesan tersebut ke admin kami. Admin akan mengkonfirmasi total harga.</p>
+                </div>
+                <div class="tutorial-item">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-gift step-icon"></i>
+                    <h3>Proses & Kirim</h3>
+                    <p>Setelah pembayaran, buketmu akan segera diproses dan dikirim atau bisa diambil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Koleksi Kami</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/product_flower.png" alt="Buket Bunga Mewah" id="img-flower">
+
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Buket Bunga</h3>
+                        <p>Rangkaian bunga artificial yang cantik, tahan lama, dan elegan untuk momen spesial.</p>
+
+                        <div class="custom-form">
+                            <div class="form-group">
+                                <label for="flower-cello">Warna Kertas (Cellophane):</label>
+                                <input type="text" id="flower-cello" placeholder="Contoh: Pink Muda">
+                            </div>
+                            <div class="form-group">
+                                <label for="flower-color">Warna Bunga:</label>
+                                <input type="text" id="flower-color" placeholder="Contoh: Merah & Putih">
+                            </div>
+                            <div class="form-group">
+                                <label for="flower-msg">Ucapan (Opsional):</label>
+                                <textarea id="flower-msg" rows="2" placeholder="Tulis ucapanmu disini..."></textarea>
+                            </div>
+
+                            <button onclick="orderFlower()" class="btn btn-outline"
+                                style="width: 100%; margin-top: 10px;">Pesan Bunga via WhatsApp</button>
+                            <p class="price-note" style="margin-top: 10px;">*Warna kertas dan bunga dapat berubah
+                                sewaktu-waktu sesuai stok. Info lebih lanjut hubungi WA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/product_money.png" alt="Buket Uang" id="img-money">
+
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Buket Uang</h3>
+                        <p>Hadiah praktis dengan tampilan yang meriah.</p>
+
+                        <div class="custom-form">
+                            <div class="form-group">
+                                <label for="money-cello">Warna Kertas (Cellophane):</label>
+                                <input type="text" id="money-cello" placeholder="Contoh: Gold">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tambahan Bunga:</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="money-flower-opt" value="Ya"
+                                            onchange="toggleMoneyFlower(true)"> Ya</label>
+                                    <label><input type="radio" name="money-flower-opt" value="Tidak" checked
+                                            onchange="toggleMoneyFlower(false)"> Tidak</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="money-flower-color-group" style="display: none;">
+                                <label for="money-flower">Warna Bunga:</label>
+                                <input type="text" id="money-flower" placeholder="Contoh: Putih">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="money-amount">Jumlah Lembaran Uang:</label>
+                                <input type="number" id="money-amount" placeholder="Contoh: 10">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="money-msg">Ucapan (Opsional):</label>
+                                <textarea id="money-msg" rows="2" placeholder="Tulis ucapanmu disini..."></textarea>
+                            </div>
+
+                            <button onclick="orderMoney()" class="btn btn-outline"
+                                style="width: 100%; margin-top: 10px;">Pesan Uang via WhatsApp</button>
+                            <p class="price-note" style="margin-top: 10px;">*Warna kertas dan bunga dapat berubah
+                                sewaktu-waktu sesuai stok. Info lebih lanjut hubungi WA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/product_doll.png" alt="Buket Boneka" id="img-doll">
+
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Buket Boneka</h3>
+                        <p>Manis dan menggemaskan untuk yang tersayang.</p>
+
+                        <div class="custom-form">
+                            <div class="form-group">
+                                <label for="doll-type">Jenis Boneka:</label>
+                                <select id="doll-type">
+                                    <option value="Polos">Boneka Polos</option>
+                                    <option value="Wisuda">Boneka Wisuda</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Warna Boneka:</label>
+                                <div class="radio-group">
+                                    <label><input type="radio" name="doll-color" value="Pink" checked> Pink</label>
+                                    <label><input type="radio" name="doll-color" value="Cream"> Cream</label>
+                                    <label><input type="radio" name="doll-color" value="Coklat"> Coklat</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="doll-cello">Warna Kertas (Cellophane):</label>
+                                <input type="text" id="doll-cello" placeholder="Contoh: Cream">
+                            </div>
+                            <div class="form-group">
+                                <label for="doll-flower">Warna Bunga:</label>
+                                <input type="text" id="doll-flower" placeholder="Contoh: Pink">
+                            </div>
+                            <div class="form-group">
+                                <label for="doll-msg">Ucapan (Opsional):</label>
+                                <textarea id="doll-msg" rows="2" placeholder="Tulis ucapanmu disini..."></textarea>
+                            </div>
+
+                            <button onclick="orderDoll()" class="btn btn-outline"
+                                style="width: 100%; margin-top: 10px;">Pesan Boneka via WhatsApp</button>
+                            <p class="price-note" style="margin-top: 10px;">*Warna kertas dan bunga dapat berubah
+                                sewaktu-waktu sesuai stok. Info lebih lanjut hubungi WA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Snack Bouquet -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/product_custom.png" alt="Buket Jajan" id="img-snack">
+
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Buket Jajan</h3>
+                        <p>Pilihan snack favorit dalam rangkaian yang seru.</p>
+
+                        <div class="custom-form">
+                            <div class="form-group">
+                                <label for="snack-cello">Warna Kertas (Cellophane):</label>
+                                <input type="text" id="snack-cello" placeholder="Contoh: Biru">
+                            </div>
+                            <div class="form-group">
+                                <label for="snack-flower">Warna Bunga (Opsional):</label>
+                                <input type="text" id="snack-flower" placeholder="Contoh: Putih">
+                            </div>
+                            <div class="form-group">
+                                <label for="snack-msg">Ucapan (Opsional):</label>
+                                <textarea id="snack-msg" rows="2" placeholder="Tulis ucapanmu disini..."></textarea>
+                            </div>
+
+                            <button onclick="orderSnack()" class="btn btn-outline"
+                                style="width: 100%; margin-top: 10px;">Pesan Jajan via WhatsApp</button>
+                            <p class="price-note" style="margin-top: 10px;">*Warna kertas dan bunga dapat berubah
+                                sewaktu-waktu sesuai stok. Info lebih lanjut hubungi WA.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/product_custom.png" alt="Buket Custom" id="img-custom">
+
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Buket Custom</h3>
+                        <p>Sesuaikan isian buket dengan keinginanmu.</p>
+
+                        <div class="custom-form">
+                            <div class="form-group">
+                                <label for="custom-budget">Budget:</label>
+                                <input type="text" id="custom-budget" placeholder="Contoh: 50.000">
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-item">Isian Barang:</label>
+                                <input type="text" id="custom-item" placeholder="Contoh: Kopi, Snack, Rokok">
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-cello">Warna Cellophane:</label>
+                                <input type="text" id="custom-cello" placeholder="Contoh: Hitam & Gold">
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-flower">Warna Bunga:</label>
+                                <input type="text" id="custom-flower" placeholder="Contoh: Merah">
+                            </div>
+                            <div class="form-group">
+                                <label for="custom-msg">Ucapan (Opsional):</label>
+                                <textarea id="custom-msg" rows="2" placeholder="Tulis ucapanmu disini..."></textarea>
+                            </div>
+                            <p class="price-note">*Start harga 35k, Syarat & Ketentuan berlaku</p>
+
+                            <button onclick="orderCustom()" class="btn btn-outline"
+                                style="width: 100%; margin-top: 10px;">Pesan Custom via WhatsApp</button>
+                            <p class="price-note" style="margin-top: 10px;">*Warna kertas dan bunga dapat berubah
+                                sewaktu-waktu sesuai stok. Info lebih lanjut hubungi WA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container text-center">
+            <h2>Buat Momenmu Lebih Indah</h2>
+            <p>Konsultasikan kebutuhan buketmu bersama kami.</p>
+            <a href="https://wa.me/6283853069226" class="btn btn-primary btn-lg" target="_blank">Hubungi Kami</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="footer-info">
+                <h3>Lafiore Bouquet</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jalan Prof M Yamin SH No 148, Selong</p>
+                <p><i class="fab fa-whatsapp"></i> 0838-5306-9226</p>
+                <p><i class="fab fa-instagram"></i> @lafiore.bouquet</p>
+            </div>
+            <p>&copy; 2024 Lafiore Bouquet. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
